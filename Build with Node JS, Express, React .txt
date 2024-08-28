@@ -1,1 +1,0 @@
-Build with Node JS, Express, React JS and MySQL

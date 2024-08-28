@@ -1,5 +1,4 @@
 GET http://localhost:5000/users
-
 ###
 GET http://localhost:5000/users/3
 
@@ -18,9 +17,11 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Cristiano",
-    "email": "cristiano@gmail.com",
-    "gender": "Male"
+    "name": "Iphone 15",
+    "brand_id": 1,
+    "brand_name": "nokia",
+    "price": 100000,
+    "stock": 10
 }
 
 ###
