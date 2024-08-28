@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { getUsersById } from '../../../backend/controller/UserController';
 
 const EditUser = () => {
 const [name, setName] = useState("");
@@ -9,8 +10,8 @@ const [gender, setGender] = useState("Male");
 const navigation = useNavigate();
 const {id} = useParams();
 
-useEffect(() =>{
-    getUserById();
+useEffect(() => {
+    getUsersById();
 },[]);
 
 const updateUser = async (e) => {

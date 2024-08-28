@@ -32,8 +32,10 @@ const deleteUser = async (id) => {
                     <tr className='border-b-2 border-b-white'>
                         <th scope='col' className='px-6 py-3 font-bold text-black'>No</th>
                         <th scope='col' className='px-6 py-3 font-bold text-black'>Name</th>
-                        <th scope='col' className='px-6 py-3 font-bold text-black'>Email</th>
-                        <th scope='col' className='px-6 py-3 font-bold text-black'>Gender</th>
+                        <th scope='col' className='px-6 py-3 font-bold text-black'>brand_id</th>
+                        <th scope='col' className='px-6 py-3 font-bold text-black'>brand_name</th>
+                        <th scope='col' className='px-6 py-3 font-bold text-black'>Price</th>
+                        <th scope='col' className='px-6 py-3 font-bold text-black'>Stock</th>
                         <th scope='col' className='px-6 py-3 font-bold text-black'>Actions</th>
                     </tr>
                 </thead>
@@ -42,8 +44,10 @@ const deleteUser = async (id) => {
                     <tr key={user.id} className='bg-white border-b hover:bg-gray-50'>
                         <td className='px-6 py-4 text-black'>{index + 1}</td>
                         <td className='px-6 py-4 text-black'>{user.name}</td>
-                        <td className='px-6 py-4 text-black'>{user.email}</td>
-                        <td className='px-6 py-4 text-black'>{user.gender}</td>
+                        <td className='px-6 py-4 text-black'>{user.brand_id}</td>
+                        <td className='px-6 py-4 text-black'>{user.brand_name}</td>
+                        <td className='px-6 py-4 text-black'>{user.price}</td>
+                        <td className='px-6 py-4 text-black'>{user.stock}</td>
                         <td className='px-6 py-4 text-black'>
                             <Link 
                             to={`edit/${user.id}`}

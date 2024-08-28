@@ -4,15 +4,17 @@ import { useNavigate } from 'react-router-dom';
 
 const AddUser = () => {
 const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [gender, setGender] = useState("Male");
+const [brand_id, setbrandId] = useState("");
+const [brand_name, setBrandNAme] = useState("");
+const [price, setPrice] = useState("");
+const [stock, setStock] = useState("");
 const navigation = useNavigate();
 
 const saveUser = async (e) => {
     e.preventDefault();
     try {
         await axios.post('http://localhost:5000/users', {
-            name, email, gender
+            name, brand_id, brand_name, price, stock
         });
         navigation("/");
     } catch (error) {
@@ -41,8 +43,8 @@ const saveUser = async (e) => {
                             <input 
                                 type="text" 
                                 className="input" 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)} 
+                                value={brand_id}
+                                onChange={(e) => setbrandId(e.target.value)} 
                                 placeholder='Email'/>
                         </div>
                 </div>
@@ -51,8 +53,8 @@ const saveUser = async (e) => {
                         <div className="control">
                             <div className="select w-full">
                                 <select 
-                                    value={gender}
-                                    onChange={(e) => setGender(e.target.value)}>
+                                    value={brand_name}
+                                    onChange={(e) => setBrandNAme(e.target.value)}>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
